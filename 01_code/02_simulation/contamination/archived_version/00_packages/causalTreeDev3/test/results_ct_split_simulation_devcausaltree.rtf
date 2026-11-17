@@ -1,0 +1,669 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16420\viewh14820\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+set.seed(???)\
+Non discrete splitting, cv.option =\'84CT\'93 and \'84matching\'93\
+\
+# tot-h / ct-h\
+> tot_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.8577509\
+> tot_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.8061446\
+> tot_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.6960053\
+> tot_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.571162\
+> tot_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.8814831\
+> tot_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.837164\
+> # user-h / ct-h\
+> user_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9999379\
+> user_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.156537\
+> user_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.97978\
+> user_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.9956228\
+> user_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.9750564\
+> user_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.064133\
+> #user-match-h /ct-h\
+> user_m_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9467196\
+> user_m_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.090393\
+> user_m_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.7456341\
+> user_m_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.7726494\
+> user_m_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.8981173\
+> user_m_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.9798219\
+> fit_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.21857\
+> fit_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.9444119\
+> fit_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.8790012\
+> fit_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.8887229\
+> fit_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.053495\
+> fit_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.254506\
+> ts_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.990386\
+> ts_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.13155\
+> ts_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1.222482\
+> ts_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1.348995\
+> ts_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.030206\
+> ts_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.053888\
+> ct_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> # tot-a / tot-h\
+> tot_d1_500_a$avg_mse_infeasible / tot_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d1_1000_a$avg_mse_infeasible / tot_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_500_a$avg_mse_infeasible / tot_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_1000_a$avg_mse_infeasible / tot_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_500_a$avg_mse_infeasible / tot_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_1000_a$avg_mse_infeasible / tot_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> user_d1_500_a$avg_mse_infeasible / user_d1_500_h$avg_mse_infeasible\
+[1] 1.050442\
+> user_d1_1000_a$avg_mse_infeasible / user_d1_1000_h$avg_mse_infeasible\
+[1] 1.042997\
+> user_d2_500_a$avg_mse_infeasible / user_d2_500_h$avg_mse_infeasible\
+[1] 0.7902836\
+> user_d2_1000_a$avg_mse_infeasible / user_d2_1000_h$avg_mse_infeasible\
+[1] 0.7950985\
+> user_d3_500_a$avg_mse_infeasible / user_d3_500_h$avg_mse_infeasible\
+[1] 0.9590053\
+> user_d3_1000_a$avg_mse_infeasible / user_d3_1000_h$avg_mse_infeasible\
+[1] 0.9540725\
+> # fit-a / fit-h\
+> fit_d1_500_a$avg_mse_infeasible / fit_d1_500_h$avg_mse_infeasible\
+[1] 0.998094\
+> fit_d1_1000_a$avg_mse_infeasible / fit_d1_1000_h$avg_mse_infeasible\
+[1] 0.9959276\
+> fit_d2_500_a$avg_mse_infeasible / fit_d2_500_h$avg_mse_infeasible\
+[1] 1.001249\
+> fit_d2_1000_a$avg_mse_infeasible / fit_d2_1000_h$avg_mse_infeasible\
+[1] 1.004142\
+> fit_d3_500_a$avg_mse_infeasible / fit_d3_500_h$avg_mse_infeasible\
+[1] 1.000831\
+> fit_d3_1000_a$avg_mse_infeasible / fit_d3_1000_h$avg_mse_infeasible\
+[1] 1.001236\
+> ts_d1_500_a$avg_mse_infeasible / ts_d1_500_h$avg_mse_infeasible\
+[1] 1.084904\
+> ts_d1_1000_a$avg_mse_infeasible / ts_d1_1000_h$avg_mse_infeasible\
+[1] 1.266487\
+> ts_d2_500_a$avg_mse_infeasible / ts_d2_500_h$avg_mse_infeasible\
+[1] 1.014665\
+> ts_d2_1000_a$avg_mse_infeasible / ts_d2_1000_h$avg_mse_infeasible\
+[1] 1.012823\
+> ts_d3_500_a$avg_mse_infeasible / ts_d3_500_h$avg_mse_infeasible\
+[1] 1.014985\
+> ts_d3_1000_a$avg_mse_infeasible / ts_d3_1000_h$avg_mse_infeasible\
+[1] 0.9993714\
+> ct_d1_500_a$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.053479\
+> ct_d1_1000_a$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.103523\
+> ct_d2_500_a$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.739337\
+> ct_d2_1000_a$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.5965426\
+> ct_d3_500_a$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.9157373\
+> ct_d3_1000_a$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.8983103\
+> user_m_d1_500_a$avg_mse_infeasible / user_m_d1_500_h$avg_mse_infeasible\
+[1] 1.008306\
+> user_m_d1_1000_a$avg_mse_infeasible / user_m_d1_1000_h$avg_mse_infeasible\
+[1] 1.022565\
+> user_m_d2_500_a$avg_mse_infeasible / user_m_d2_500_h$avg_mse_infeasible\
+[1] 1.018634\
+> user_m_d2_1000_a$avg_mse_infeasible / user_m_d2_1000_h$avg_mse_infeasible\
+[1] 0.9956387\
+> user_m_d3_500_a$avg_mse_infeasible / user_m_d3_500_h$avg_mse_infeasible\
+[1] 1.010915\
+> user_m_d3_1000_a$avg_mse_infeasible / user_m_d3_1000_h$avg_mse_infeasible\
+[1] 1.001332\
+\
+###########################################################################################\
+Set.seed(123)\
+\
+\
+> # tot-h / ct-h\
+> tot_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.8970061\
+> tot_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.795647\
+> tot_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.7049338\
+> tot_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.5476573\
+> tot_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.8916875\
+> tot_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.8398098\
+\
+> # user-h / ct-h\
+> user_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.0457\
+> user_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.141476\
+> user_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.9923488\
+> user_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.9546505\
+> user_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.986344\
+> user_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.067496\
+\
+> fit_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.278816\
+> fit_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.9315947\
+> fit_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.8947595\
+> fit_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.8513217\
+> fit_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.066573\
+> fit_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.259811\
+> ts_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.035711\
+> ts_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.116815\
+> ts_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1.238165\
+> ts_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1.29348\
+> ts_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.042132\
+> ts_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.057219\
+> ct_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> # tot-a / tot-h\
+> tot_d1_500_a$avg_mse_infeasible / tot_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> # user-h / ct-h\
+> user_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.0457\
+> user_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.141476\
+> user_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.9923488\
+> user_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.9546505\
+> user_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.986344\
+> user_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.067496\
+> #user-match-h /ct-h\
+> user_m_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9927302\
+> #user-match-h /ct-h\
+> user_m_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9927302\
+> user_m_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.083844\
+> user_m_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.7591699\
+> user_m_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.7378251\
+> user_m_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.916355\
+> user_m_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.9793727\
+> fit_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.278816\
+> fit_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.9315947\
+> fit_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.8947595\
+> fit_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.8513217\
+> fit_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.066573\
+> fit_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.259811\
+> ts_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.035711\
+> ts_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.116815\
+> ts_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1.238165\
+> ts_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1.29348\
+> ts_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.042132\
+> ts_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.057219\
+> ct_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> # tot-a / tot-h\
+> tot_d1_500_a$avg_mse_infeasible / tot_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d1_1000_a$avg_mse_infeasible / tot_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_500_a$avg_mse_infeasible / tot_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_1000_a$avg_mse_infeasible / tot_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_500_a$avg_mse_infeasible / tot_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_1000_a$avg_mse_infeasible / tot_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> user_d1_500_a$avg_mse_infeasible / user_d1_500_h$avg_mse_infeasible\
+[1] 1.050442\
+> user_d1_1000_a$avg_mse_infeasible / user_d1_1000_h$avg_mse_infeasible\
+[1] 1.042997\
+> user_d2_500_a$avg_mse_infeasible / user_d2_500_h$avg_mse_infeasible\
+[1] 0.7902836\
+> user_d2_1000_a$avg_mse_infeasible / user_d2_1000_h$avg_mse_infeasible\
+[1] 0.7950985\
+> user_d3_500_a$avg_mse_infeasible / user_d3_500_h$avg_mse_infeasible\
+[1] 0.9590053\
+> user_d3_1000_a$avg_mse_infeasible / user_d3_1000_h$avg_mse_infeasible\
+[1] 0.9540725\
+> # fit-a / fit-h\
+> fit_d1_500_a$avg_mse_infeasible / fit_d1_500_h$avg_mse_infeasible\
+[1] 0.9945991\
+> fit_d1_1000_a$avg_mse_infeasible / fit_d1_1000_h$avg_mse_infeasible\
+[1] 0.9964826\
+> fit_d2_500_a$avg_mse_infeasible / fit_d2_500_h$avg_mse_infeasible\
+[1] 0.9962334\
+> fit_d2_1000_a$avg_mse_infeasible / fit_d2_1000_h$avg_mse_infeasible\
+[1] 1.005119\
+> fit_d3_500_a$avg_mse_infeasible / fit_d3_500_h$avg_mse_infeasible\
+[1] 1.000003\
+> fit_d3_1000_a$avg_mse_infeasible / fit_d3_1000_h$avg_mse_infeasible\
+[1] 1.000172\
+> ts_d1_500_a$avg_mse_infeasible / ts_d1_500_h$avg_mse_infeasible\
+[1] 1.084904\
+> ts_d1_1000_a$avg_mse_infeasible / ts_d1_1000_h$avg_mse_infeasible\
+[1] 1.266487\
+> ts_d2_500_a$avg_mse_infeasible / ts_d2_500_h$avg_mse_infeasible\
+[1] 1.014665\
+> ts_d2_1000_a$avg_mse_infeasible / ts_d2_1000_h$avg_mse_infeasible\
+[1] 1.012823\
+> ts_d3_500_a$avg_mse_infeasible / ts_d3_500_h$avg_mse_infeasible\
+[1] 1.014985\
+> ts_d3_1000_a$avg_mse_infeasible / ts_d3_1000_h$avg_mse_infeasible\
+[1] 0.9993714\
+> ct_d1_500_a$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.101692\
+> ct_d1_1000_a$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.089153\
+> ct_d2_500_a$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.7488213\
+> ct_d2_1000_a$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.5719934\
+\
+##########################################################################################\
+\
+Discrete Splitting: Set.seed(123)\
+\
+tot-h / ct-h\
+> tot_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9765997\
+> tot_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.8685609\
+> tot_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.7964643\
+> tot_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.6983283\
+> tot_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.9571212\
+> tot_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.9155763\
+> fit_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.484632\
+> fit_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.099429\
+> fit_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.9794704\
+> fit_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1.111317\
+> fit_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.160655\
+> fit_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.40615\
+> ts_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9255558\
+> ts_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.9022864\
+> ts_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1.147859\
+> ts_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1.238789\
+> ts_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.024134\
+> ts_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.18961\
+> ct_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> # tot-a / tot-h\
+> tot_d1_500_a$avg_mse_infeasible / tot_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d1_1000_a$avg_mse_infeasible / tot_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_500_a$avg_mse_infeasible / tot_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_1000_a$avg_mse_infeasible / tot_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_500_a$avg_mse_infeasible / tot_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_1000_a$avg_mse_infeasible / tot_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> # fit-a / fit-h\
+> fit_d1_500_a$avg_mse_infeasible / fit_d1_500_h$avg_mse_infeasible\
+[1] 0.9951217\
+> fit_d1_1000_a$avg_mse_infeasible / fit_d1_1000_h$avg_mse_infeasible\
+[1] 1.005021\
+> fit_d2_500_a$avg_mse_infeasible / fit_d2_500_h$avg_mse_infeasible\
+[1] 0.9955334\
+> fit_d2_1000_a$avg_mse_infeasible / fit_d2_1000_h$avg_mse_infeasible\
+[1] 1.000759\
+> fit_d3_500_a$avg_mse_infeasible / fit_d3_500_h$avg_mse_infeasible\
+[1] 0.9979288\
+> fit_d3_1000_a$avg_mse_infeasible / fit_d3_1000_h$avg_mse_infeasible\
+[1] 1.000747\
+> ts_d1_500_a$avg_mse_infeasible / ts_d1_500_h$avg_mse_infeasible\
+[1] 1.026724\
+> ts_d1_1000_a$avg_mse_infeasible / ts_d1_1000_h$avg_mse_infeasible\
+[1] 1.410322\
+> ts_d2_500_a$avg_mse_infeasible / ts_d2_500_h$avg_mse_infeasible\
+[1] 1.01557\
+> ts_d2_1000_a$avg_mse_infeasible / ts_d2_1000_h$avg_mse_infeasible\
+[1] 1.035978\
+> ts_d3_500_a$avg_mse_infeasible / ts_d3_500_h$avg_mse_infeasible\
+[1] 0.9951413\
+> ts_d3_1000_a$avg_mse_infeasible / ts_d3_1000_h$avg_mse_infeasible\
+[1] 0.8848735\
+> ct_d1_500_a$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.099731\
+> ct_d1_1000_a$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.122553\
+> ct_d2_500_a$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.8447673\
+> ct_d2_1000_a$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.7303035\
+> ct_d3_500_a$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.9994168\
+> ct_d3_1000_a$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.9454399\
+\
+#######################################################################################\
+Non-Discrete Splitting and Medianestimator\
+Using Matching and User as cv.option \
+Set.Seed(123) \
+\
+# tot-h / et-h\
+> tot_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.8970061\
+> tot_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.795647\
+> \
+> tot_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.7049338\
+> tot_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.5476573\
+> \
+> tot_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.8916875\
+> tot_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.8398098\
+> \
+> # user-h / ct-h\
+> user_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.0457\
+> user_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.141476\
+> \
+> user_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.9923488\
+> user_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.9546505\
+> \
+> user_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.986344\
+> user_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.067496\
+> \
+> #user-match-h /ct-h\
+> user_m_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 0.9900464\
+> user_m_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible \
+[1] 1.076194\
+> \
+> user_m_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible \
+[1] 0.7551992\
+> user_m_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.7408529\
+> \
+> user_m_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible \
+[1] 0.9085143\
+> user_m_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.9829186\
+> \
+> # f-h / ct-h\
+> \
+> fit_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.278816\
+> fit_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 0.9315947\
+> \
+> fit_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.8947595\
+> fit_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.8513217\
+> \
+> fit_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.066573\
+> fit_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.259811\
+> \
+> \
+> # ts-h / ct-h\
+> \
+> ts_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.035711\
+> ts_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.116815\
+> \
+> ts_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1.238165\
+> ts_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1.29348\
+> \
+> ts_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1.042132\
+> ts_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1.057219\
+> \
+> \
+> # ct-h / ct-h (for completeness, should all be equal 1)\
+> \
+> ct_d1_500_h$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d1_1000_h$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> \
+> ct_d2_500_h$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d2_1000_h$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> \
+> ct_d3_500_h$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> ct_d3_1000_h$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> \
+> ##### Infeasible MSE - Honest vs. Adaptive ####\
+> \
+> # tot-a / tot-h\
+> tot_d1_500_a$avg_mse_infeasible / tot_d1_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d1_1000_a$avg_mse_infeasible / tot_d1_1000_h$avg_mse_infeasible\
+[1] 1\
+> \
+> tot_d2_500_a$avg_mse_infeasible / tot_d2_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d2_1000_a$avg_mse_infeasible / tot_d2_1000_h$avg_mse_infeasible\
+[1] 1\
+> \
+> tot_d3_500_a$avg_mse_infeasible / tot_d3_500_h$avg_mse_infeasible\
+[1] 1\
+> tot_d3_1000_a$avg_mse_infeasible / tot_d3_1000_h$avg_mse_infeasible\
+[1] 1\
+> \
+> # user-a /user-h\
+> \
+> user_d1_500_a$avg_mse_infeasible / user_d1_500_h$avg_mse_infeasible\
+[1] 1.050442\
+> user_d1_1000_a$avg_mse_infeasible / user_d1_1000_h$avg_mse_infeasible\
+[1] 1.042997\
+> \
+> user_d2_500_a$avg_mse_infeasible / user_d2_500_h$avg_mse_infeasible\
+[1] 0.7902836\
+> user_d2_1000_a$avg_mse_infeasible / user_d2_1000_h$avg_mse_infeasible\
+[1] 0.7950985\
+> \
+> user_d3_500_a$avg_mse_infeasible / user_d3_500_h$avg_mse_infeasible\
+[1] 0.9590053\
+> user_d3_1000_a$avg_mse_infeasible / user_d3_1000_h$avg_mse_infeasible\
+[1] 0.9540725\
+> \
+> # fit-a / fit-h\
+> fit_d1_500_a$avg_mse_infeasible / fit_d1_500_h$avg_mse_infeasible\
+[1] 0.9945991\
+> fit_d1_1000_a$avg_mse_infeasible / fit_d1_1000_h$avg_mse_infeasible\
+[1] 0.9964826\
+> \
+> fit_d2_500_a$avg_mse_infeasible / fit_d2_500_h$avg_mse_infeasible\
+[1] 0.9962334\
+> fit_d2_1000_a$avg_mse_infeasible / fit_d2_1000_h$avg_mse_infeasible\
+[1] 1.005119\
+> \
+> fit_d3_500_a$avg_mse_infeasible / fit_d3_500_h$avg_mse_infeasible\
+[1] 1.000003\
+> fit_d3_1000_a$avg_mse_infeasible / fit_d3_1000_h$avg_mse_infeasible\
+[1] 1.000172\
+> \
+> # ts-a / ts-h\
+> \
+> ts_d1_500_a$avg_mse_infeasible / ts_d1_500_h$avg_mse_infeasible\
+[1] 1.084904\
+> ts_d1_1000_a$avg_mse_infeasible / ts_d1_1000_h$avg_mse_infeasible\
+[1] 1.266487\
+> \
+> ts_d2_500_a$avg_mse_infeasible / ts_d2_500_h$avg_mse_infeasible\
+[1] 1.014665\
+> ts_d2_1000_a$avg_mse_infeasible / ts_d2_1000_h$avg_mse_infeasible\
+[1] 1.012823\
+> \
+> ts_d3_500_a$avg_mse_infeasible / ts_d3_500_h$avg_mse_infeasible\
+[1] 1.014985\
+> ts_d3_1000_a$avg_mse_infeasible / ts_d3_1000_h$avg_mse_infeasible\
+[1] 0.9993714\
+> \
+> # ct-a / ct-h\
+> \
+> ct_d1_500_a$avg_mse_infeasible / ct_d1_500_h$avg_mse_infeasible\
+[1] 1.101692\
+> ct_d1_1000_a$avg_mse_infeasible / ct_d1_1000_h$avg_mse_infeasible\
+[1] 1.089153\
+> \
+> ct_d2_500_a$avg_mse_infeasible / ct_d2_500_h$avg_mse_infeasible\
+[1] 0.7488213\
+> ct_d2_1000_a$avg_mse_infeasible / ct_d2_1000_h$avg_mse_infeasible\
+[1] 0.5719934\
+> \
+> ct_d3_500_a$avg_mse_infeasible / ct_d3_500_h$avg_mse_infeasible\
+[1] 0.9263382\
+> ct_d3_1000_a$avg_mse_infeasible / ct_d3_1000_h$avg_mse_infeasible\
+[1] 0.9011494\
+> \
+> # user-matching-a /user-matching-h\
+> \
+> user_m_d1_500_a$avg_mse_infeasible / user_m_d1_500_h$avg_mse_infeasible\
+[1] 1.008306\
+> user_m_d1_1000_a$avg_mse_infeasible / user_m_d1_1000_h$avg_mse_infeasible\
+[1] 1.022565\
+> \
+> user_m_d2_500_a$avg_mse_infeasible / user_m_d2_500_h$avg_mse_infeasible\
+[1] 1.018634\
+> user_m_d2_1000_a$avg_mse_infeasible / user_m_d2_1000_h$avg_mse_infeasible\
+[1] 0.9956387\
+> \
+> user_m_d3_500_a$avg_mse_infeasible / user_m_d3_500_h$avg_mse_infeasible\
+[1] 1.010915\
+> user_m_d3_1000_a$avg_mse_infeasible / user_m_d3_1000_h$avg_mse_infeasible\
+[1] 1.001332\
+}
