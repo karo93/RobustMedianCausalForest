@@ -35,10 +35,6 @@ dataset_names <- list.files(train_dir)
 dataset_names <- dataset_names[grep("s2", dataset_names)]
 
 set.seed(1)
-library(doParallel)
-
-cl <- parallel::makeCluster(parallel::detectCores() - 2)
-doParallel::registerDoParallel(cl)
 
 splitRule <- "MSD"
 
@@ -88,4 +84,3 @@ for (k in 1:1) {
   }
 }
 
-parallel::stopCluster(cl)
